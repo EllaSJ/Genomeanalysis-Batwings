@@ -1,0 +1,34 @@
+Project plan
+The aim of this project is to redo the analysis described in the article “Transcriptomic and epigenomic characterization of the developing 
+bat wing” by Eckalbar et al. The article describes an analysis of how bat wings are developed by comparing gene expression and the 
+different development between fore- and hindlimbs during several embryonic stages of the bat species Miniopterus natalensis. 
+By redoing the analysis using the same data and similar methods, the results obtained in the study by Eckalbar et al. can be confirmed or not. 
+Since bats are the only mammal capable of flying, the study of the development of their wings is really interesting, especially if comparing
+with a mammal closely related to the bat without wings, such as mouse. Therefore, the analysis will also contain comparisons with mouse genomes. 
+
+Several analyses will be performed during this project using different software. Firstly, a quality check of the bat genome data will be
+performed using the software fastQC, which takes approximately 3 minutes. The quality check will be followed by trimming of the data using 
+Trimmomatic which takes about 1-10 minutes per file, and thereafter another quality check using fastQC will be performed for another 3 minutes. 
+Next, a genome assembly of Illumina reads, short-reads, will be performed using SOAPdenovo. This analysis takes about 1,5 hours. Thereafter, a 
+quality assessment of the of the assembly needs to be performed, using MUMmerplot, taking up less than 5 minutes of time. After this, a structural
+and functional annotation will be performed, using BRAKER. And at last, a differential expression analysis will be done using Htseq, also performed 
+under 5 minutes.
+
+Most of the analyses that needs to be performed during this project doesn’t take so much time, except the genome assembly which possibly is the
+only bottle-neck. All of the analyses are preferably planned ahead in a time plan to make sure that there is enough time for the genome assembly. 
+Since everything doesn’t always go as planned, some extra time needs to be planned for too, for each analysis.
+
+The time frame for the project spans from week 12 until approximately week 20, with a break during week 13. In total, there are 8 weeks of time 
+for the project. Since each of the analyses takes quite short time, it should be possible to perform them during the first four weeks, and thereafter 
+analyze the data and results obtained by the analyses, and also compare the results with the results described in the article by Eckalbar et al. 
+The genome assembly, which is the most time-consuming analysis should be performed before the 15th of April according to the course deadlines.
+
+Since there will be a lot of data and different files used during the project, it is important to organize and structure everything in a good way in GitHub.
+The most important thing is to use informative names, so that it is clear what data that each file contains. The data should also be saved in plain text 
+files as .tsv or .csv. Code and data should also be separated in the working directory.
+
+This project will be challenging, both since all of these analyses are new to me and also the way of working with data. If I get stuck, I will firstly 
+check the student manual, then try to contact other students who has the same article and at last contact teachers or lab assistants. A lot of information 
+is available in the student manual, and information about all software is available on the website of Uppmax. Since I’m quite new in using both GitHub 
+and Uppmax in the way we’re supposed to do in this course, that will probably be quite challenging in the beginning, but I will learn as I proceed 
+with the project.
