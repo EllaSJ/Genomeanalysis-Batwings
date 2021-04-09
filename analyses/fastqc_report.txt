@@ -1,0 +1,20 @@
+FastQC were run on the rna-seq files and the wgs-trimmed data files one by one directly in the terminal. 
+The following command lines were run before starting the analyses:
+
+module load bioinfo-tools
+module load FastQC/0.11.1
+
+Thereafter soft links for all files with raw rna-seq data and wgs-trimmed data were made one by one and put in separate folders.
+The following command was used for each file:
+
+ln -s /proj/g2021012/2_Eckalbar_2016/sel3/ 
+
+Followed by the folder and the name of the current file.
+
+Then fastQC were run on all rna-seq files using the following commando on each file:
+fastqc -o /home/ellasj/genome_analysis/Genomeanalysis-Batwings/analyses/fastqc_raw_rna_data /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/raw_data/filename
+Where filename had the name of the current file.
+
+Then fastQC were run on all wgd files using the following commando on each file:
+fastqc -o /home/ellasj/genome_analysis/Genomeanalysis-Batwings/analyses/fastqc_trimmed_wgs_data /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/filename
+Where filename had the name of the current file.
