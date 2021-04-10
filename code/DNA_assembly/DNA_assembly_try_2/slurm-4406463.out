@@ -1,0 +1,338 @@
+
+Version 2.04: released on July 13th, 2012
+Compile Nov 20 2013	12:17:09
+
+********************
+Pregraph
+********************
+
+Parameters: pregraph -s soap.config -K 55 -p 8 -R -o asm 
+
+In soap.config, 1 lib(s), maximum read length 100, maximum name length 256.
+
+8 thread(s) initialized.
+Import reads from file:
+ /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/sel3_SRR5819794.trim_1P.fastq.gz
+Import reads from file:
+ /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/sel3_SRR5819794.trim_1U.fastq.gz
+Time spent on hashing reads: 41s, 2624816 read(s) processed.
+LIB(s) information:
+ [LIB] 0, avg_ins 220, reverse 0.
+33862677 node(s) allocated, 109405430 kmer(s) in reads, 109405430 kmer(s) processed.
+done hashing nodes
+32109562 linear node(s) marked.
+Time spent on marking linear nodes: 1s.
+Time spent on pre-graph construction: 42s.
+
+Start to remove frequency-one-kmer tips shorter than 110.
+Total 572639 tip(s) removed.
+8 thread(s) initialized.
+122708 linear node(s) marked.
+Start to remove tips with minority links.
+307022 tip(s) removed in cycle 1.
+6478 tip(s) removed in cycle 2.
+47 tip(s) removed in cycle 3.
+1 tip(s) removed in cycle 4.
+0 tip(s) removed in cycle 5.
+Total 313548 tip(s) removed.
+8 thread(s) initialized.
+0 linear node(s) marked.
+Time spent on removing tips: 21s.
+
+1438872 (719437) edge(s) and 150863 extra node(s) constructed.
+Time spent on constructing edges: 14s.
+
+In file: soap.config, max seq len 100, max name len 256.
+8 thread(s) initialized.
+Import reads from file:
+ /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/sel3_SRR5819794.trim_1P.fastq.gz
+Import reads from file:
+ /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/sel3_SRR5819794.trim_1U.fastq.gz
+2624816 read(s) processed.
+Time spent on:
+ importing reads: 7s,
+ chopping reads to kmers: 4s,
+ searching kmers: 21s,
+ aligning reads to edges: 4s,
+ searching (K+1)mers: 2s,
+ adding pre-arcs: 3s,
+ recording read paths: 0s.
+19366127 marker(s) output.
+Reads alignment done, 700134 read(s) deleted, 1334022 pre-arc(s) added.
+LIB(s) information:
+ [LIB] 0, avg_ins 220, reverse 0.
+Time spent on aligning reads: 51s.
+
+545943 vertex(es) output.
+Overall time spent on constructing pre-graph: 2m.
+
+
+********************
+Contig
+********************
+
+Parameters: contig -g asm -M 1 -R -s soap.config -p 8 -E 
+
+There are 545943 kmer(s) in vertex file.
+There are 1438872 edge(s) in edge file.
+Kmers sorted.
+1438872 edge(s) input.
+1751400 pre-arcs loaded.
+19552392 markers overall.
+19552392 markers loaded.
+358990 none-palindrome edge(s) swapped, 0 palindrome edge(s) processed.
+1438872 edge(s) sorted.
+Arcs sorted.
+20577 repeat(s) are solvable, 41176 more edge(s).
+82352 dead arc(s) removed.
+Time spent on solving repeat: 0s.
+Start to pinch bubbles, cutoff 0.100000, MAX NODE NUM 3, MAX DIFF NUM 2.
+65981 start points, 1023140 dheap nodes.
+249843 pair(s) found, 282 pair of path(s) compared, 197 pair(s) merged.
+Sequence comparison failed:
+ Path crossing deleted edge                         0
+ Length difference of two paths greater than two    54
+ Mismatch score greater than cutoff (2)             9
+ Mismatch score ratio greater than cutoff (0.1)     0
+ Path length shorter than (Kmer-1)                  22
+DFibHeap: 47605 node(s) allocated.
+106680 edge(s) concatenated in cycle 1.
+1856 edge(s) concatenated in cycle 2.
+0 edge(s) concatenated in cycle 3.
+Time spent on pinching bubbles: 2s.
+Start to destroy weak inner edges.
+32814 weak inner edge(s) destroyed in cycle 1.
+472 weak inner edge(s) destroyed in cycle 2.
+4 weak inner edge(s) destroyed in cycle 3.
+0 weak inner edge(s) destroyed in cycle 4.
+65355 dead arc(s) removed.
+13148 inner edge(s) with coverage lower than or equal to 1 destroyed.
+27852 dead arc(s) removed.
+59616 edge(s) concatenated in cycle 1.
+303 edge(s) concatenated in cycle 2.
+0 edge(s) concatenated in cycle 3.
+Before compacting, 1480048 edge(s) existed.
+After compacting, 1049852 edge(s) left.
+
+Strict: 0, cutoff length: 110.
+158764 tips cut in cycle 1.
+31684 tips cut in cycle 2.
+9623 tips cut in cycle 3.
+4748 tips cut in cycle 4.
+3180 tips cut in cycle 5.
+2333 tips cut in cycle 6.
+1946 tips cut in cycle 7.
+1623 tips cut in cycle 8.
+1400 tips cut in cycle 9.
+1256 tips cut in cycle 10.
+1089 tips cut in cycle 11.
+1016 tips cut in cycle 12.
+844 tips cut in cycle 13.
+734 tips cut in cycle 14.
+640 tips cut in cycle 15.
+520 tips cut in cycle 16.
+425 tips cut in cycle 17.
+319 tips cut in cycle 18.
+323 tips cut in cycle 19.
+289 tips cut in cycle 20.
+233 tips cut in cycle 21.
+158 tips cut in cycle 22.
+119 tips cut in cycle 23.
+94 tips cut in cycle 24.
+51 tips cut in cycle 25.
+45 tips cut in cycle 26.
+30 tips cut in cycle 27.
+20 tips cut in cycle 28.
+20 tips cut in cycle 29.
+17 tips cut in cycle 30.
+13 tips cut in cycle 31.
+13 tips cut in cycle 32.
+11 tips cut in cycle 33.
+5 tips cut in cycle 34.
+7 tips cut in cycle 35.
+14 tips cut in cycle 36.
+12 tips cut in cycle 37.
+6 tips cut in cycle 38.
+2 tips cut in cycle 39.
+2 tips cut in cycle 40.
+1 tips cut in cycle 41.
+2 tips cut in cycle 42.
+0 tips cut in cycle 43.
+87343 dead arc(s) removed.
+60486 edge(s) concatenated in cycle 1.
+949 edge(s) concatenated in cycle 2.
+1 edge(s) concatenated in cycle 3.
+0 edge(s) concatenated in cycle 4.
+Before compacting, 1049852 edge(s) existed.
+After compacting, 479718 edge(s) left.
+
+There are 41080 contig(s) longer than 100, sum up 6718392 bp, with average length 163.
+The longest length is 1370 bp, contig N50 is 172 bp,contig N90 is 111 bp.
+239860 contig(s) longer than 56 output.
+
+Time spent on constructing contig: 0m.
+
+
+********************
+Map
+********************
+
+Parameters: map -s soap.config -g asm -p 8 -K 55 
+
+Kmer size: 55.
+Contig length cutoff: 57.
+
+239860 contig(s), maximum sequence length 1370, minimum sequence length 56, maximum name length 10.
+Time spent on parsing contigs file: 0s.
+8 thread(s) initialized.
+Time spent on hashing contigs: 2s.
+5847127 node(s) allocated, 6087733 kmer(s) in contigs, 6087733 kmer(s) processed.
+Time spent on graph construction: 2s.
+
+Time spent on aligning long reads: 0s.
+
+In file: soap.config, max seq len 100, max name len 256
+8 thread(s) initialized.
+479718 edge(s) in the graph.
+Import reads from file:
+ /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/sel3_SRR5819794.trim_1P.fastq.gz
+Import reads from file:
+ /home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/trimmed_data/sel3_SRR5819794.trim_1U.fastq.gz
+Current insert size is 220, map_len is 32.
+
+Total reads         2624818
+Reads in gaps       1335202
+Ratio               50.9%
+Reads on contigs    1427779
+Ratio               54.4%
+1 pe insert size, the largest boundary is 2624818.
+
+LIB(s) information:
+ [LIB] 0, avg_ins 220, reverse 0.
+Time spent on aligning reads: 45s.
+
+Overall time spent on alignment: 0m.
+
+
+********************
+Scaff
+********************
+
+Parameters: scaff -g asm -F -p 8 -u -w 
+
+Files for scaffold construction are OK.
+
+There are 1 grad(s), 2624818 read(s), max read len 100.
+Kmer size: 55
+There are 479718 edge(s) in edge file.
+Mask contigs shorter than 57, 421998 contig(s) masked.
+640670 arc(s) loaded, average weight is 3.
+239860 contig(s) loaded.
+Done loading updated edges.
+Time spent on loading updated edges: 1s.
+
+*****************************************************
+Start to load paired-end reads information.
+
+For insert size: 220
+ Total PE links                      384565
+ Normal PE links on same contig      0
+ Incorrect oriented PE links         4
+ PE links of too small insert size   60288
+ PE links of too large insert size   0
+ Correct PE links                    324273
+ Accumulated connections             558632
+Use contigs longer than 220 to estimate insert size: 
+ PE links               0
+Too few PE links.
+279316 new connections.
+
+All paired-end reads information loaded.
+Time spent on loading paired-end reads information: 1s.
+
+*****************************************************
+Start to construct scaffolds.
+
+***************************
+For insert size: 220
+ Total PE links                279315
+ PE links to masked contigs    260524
+ On same scaffold PE links     0
+Cutoff of PE links to make a reliable connection: 3
+ Active connections    37582
+ Weak connections      37582
+ Weak ratio            100.0%
+0 circles removed.
+Start to remove transitive connection.
+Total contigs                         479718
+Masked contigs                        421998
+Remained contigs                      57720
+None-outgoing-connection contigs      57720 (100.000000%)
+Single-outgoing-connection contigs    0
+Multi-outgoing-connection contigs     0
+Cycle 1
+ Two-outgoing-connection contigs     0
+ Potential transitive connections    0
+ Transitive connections              0
+Start to linearize sub-graph.
+ Picked sub-graphs          0
+ Connection-conflict        0
+ Significant overlapping    0
+ Eligible                   0
+ Bubble structures          0
+Mask repeats:
+ Puzzles           0
+ Masked contigs    0
+Start to remove transitive connection.
+Total contigs                         479718
+Masked contigs                        421998
+Remained contigs                      57720
+None-outgoing-connection contigs      57720 (100.000000%)
+Single-outgoing-connection contigs    0
+Multi-outgoing-connection contigs     0
+Cycle 1
+ Two-outgoing-connection contigs     0
+ Potential transitive connections    0
+ Transitive connections              0
+Start to linearize sub-graph.
+ Picked sub-graphs          0
+ Connection-conflict        0
+ Significant overlapping    0
+ Eligible                   0
+ Bubble structures          0
+Non-strict linearization.
+Start to linearize sub-graph.
+ Picked sub-graphs          0
+ Connection-conflict        0
+ Significant overlapping    0
+ Eligible                   0
+ Bubble structures          0
+Start to mask puzzles.
+ Masked contigs      0
+ Remained puzzles    0
+Freezing done.
+
+Recover contigs.
+ Total recovered contigs    0
+ Single-route cases         0
+ Multi-route cases          0
+
+All links loaded.
+Time spent on constructing scaffolds: 1s.
+
+The final rank
+
+
+No scaffold was constructed.
+
+
+Start to load reads for gap filling. 50 length discrepancy is allowed.
+...
+Loaded 1335202 reads from asm.readInGap.
+8 thread(s) initialized.
+
+Done with 0 scaffolds, 0 gaps finished, 0 gaps overall.
+Threads processed 0 scaffolds.
+
+Overall time spent on constructing scaffolds: 0m.
+Time for the whole pipeline: 3m.
