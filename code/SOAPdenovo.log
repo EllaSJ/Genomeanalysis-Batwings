@@ -1,0 +1,16 @@
+Program: GapCloser
+Version: 1.12
+
+Parameters:
+    -a (scaffold file): asm.scafSeq
+    -b (config file):   soap.config
+    -o (output file):   asm.new.scafSeq
+    -l (max read len):  100
+    -p (overlap para):  25
+    -t (thread num):    8
+
+
+>>>>>>>>>>hash initializing<<<<<<<<<<
+
+counting reads
+in lib: 
