@@ -1,0 +1,21 @@
+#!/bin/bash -l
+#SBATCH -A g2021012
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 01:00:00
+#SBATCH -J ellasj_differential_expression
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user ellasj@hotmail.com
+
+# Load modules
+module load bioinfo-tools
+module load htseq
+
+# Your commands
+/sw/bioinfo/htseq/0.12.4/snowy/bin/htseq-count --idattr=gene \
+/home/ellasj/genome_analysis/Genomeanalysis-Batwings/code/alignment/new_samfiles/sam_sel3_SRR1719014Aligned.out.sam \
+/home/ellasj/genome_analysis/Genomeanalysis-Batwings/code/alignment/new_samfiles/sam_sel3_SRR1719015Aligned.out.sam \
+/home/ellasj/genome_analysis/Genomeanalysis-Batwings/code/alignment/new_samfiles/sam_sel3_SRR1719016Aligned.out.sam \
+/home/ellasj/genome_analysis/Genomeanalysis-Batwings/code/alignment/new_samfiles/sam_sel3_SRR1719017Aligned.out.sam \
+/home/ellasj/genome_analysis/Genomeanalysis-Batwings/data/additional_annotation_data/extracted_scaff_3.gff
